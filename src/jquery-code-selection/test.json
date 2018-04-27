@@ -1,0 +1,139 @@
+{
+  "data": [
+    {
+      "id":"1",
+      "code":"1",
+      "text": "中国",
+      "pinyin": "zg",
+      "parentCode": "0"
+    },
+    {
+      "id":"2",
+      "code":"2",
+      "text": "广东",
+      "icon" : "../../img/48.png",
+      "pinyin": "gd",
+      "parentCode": "0"
+    },{
+      "id":"12",
+      "code":"12",
+      "text": "广州",
+      "pinyin": "gz",
+      "parentCode": "0"
+    },{
+      "id":"22",
+      "code":"22",
+      "text": "天河区",
+      "pinyin": "th",
+      "parentCode": "0"
+    },{
+      "id":"23",
+      "code":"23",
+      "text": "黄浦区",
+      "pinyin": "hp",
+      "parentCode": "0"
+    }, {
+      "id":"3",
+      "code":"3",
+      "text": "北京",
+      "pinyin": "bj",
+      "parentCode": "0"
+
+    },
+    {
+      "id":"4",
+      "code":"4",
+      "text": "深圳",
+      "pinyin": "sz",
+      "parentCode": "0"
+    },{
+      "id":"51",
+      "code":"51",
+      "text": "中国22",
+      "pinyin": "zg",
+      "parentCode": "0"
+    },{
+      "id":"552",
+      "code":"552",
+      "text": "广东22",
+      "pinyin": "gd",
+      "parentCode": "0"
+    },{
+      "id":"512",
+      "code":"512",
+      "text": "广州22",
+      "pinyin": "gz",
+      "parentCode": "0"
+    },{
+      "id":"522",
+      "code":"522",
+      "text": "天河区22",
+      "pinyin": "th",
+      "parentCode": "0"
+    },
+    {
+      "id":"523",
+      "code":"523",
+      "text": "黄浦区22",
+      "pinyin": "hp",
+      "parentCode": "0"
+    },{
+      "id":"63",
+      "code":"63",
+      "text": "北京22",
+      "pinyin": "bj",
+      "parentCode": "0"
+    },
+    {
+      "id":"64",
+      "code":"64",
+      "text": "深圳22",
+      "pinyin": "sz",
+      "parentCode": "0"
+    },{
+      "id":"661",
+      "code":"661",
+      "text": "中国33",
+      "pinyin": "zg",
+      "parentCode": "0"
+    },{
+      "id":"662",
+      "code":"662",
+      "text": "广东33",
+      "pinyin": "gd",
+      "parentCode": "0"
+    },{
+      "id":"612",
+      "code":"612",
+      "text": "广州33",
+      "pinyin": "gz",
+      "parentCode": "0"
+    },{
+      "id":"622",
+      "code":"622",
+      "text": "天河区33",
+      "pinyin": "th",
+      "parentCode": "0"
+    },
+    {
+      "id":"623",
+      "code":"623",
+      "text": "黄浦区33",
+      "pinyin": "hp",
+      "parentCode": "0"
+    },{
+      "id":"663",
+      "code":"663",
+      "text": "北京33",
+      "pinyin": "bj",
+      "parentCode": "0"
+    },
+    {
+      "id":"664",
+      "code":"664",
+      "text": "深圳33",
+      "pinyin": "sz",
+      "parentCode": "0"
+    }
+  ]
+}

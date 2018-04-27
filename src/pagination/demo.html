@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<link rel="stylesheet" href="jquery-pagination.css"/>
+
+<style>
+
+</style>
+<body>
+    <div class="list">
+        <ul></ul>
+    </div>
+    <div id="pagination"></div>
+</body>
+<script src="/crdp/js/jquery.min.js?v=2.1.6"></script>
+<script type="text/javascript" src="jquery-pagination.js"></script>
+
+<script>
+    var option = {
+        total: 108,  // 总条目数
+        pageSize: 8,   // 每页显示条数
+        visiblePages: 10,   // 最多显示的页数
+        onPageChange: function (value) { // 切换页码的触发回调
+            console.log('当前是第' + value + '页');
+            getData();
+        }
+    };
+
+    function getData() {
+        setTimeout(function () {
+            $('#pagination').pagination(option);
+        },1500);
+    }
+
+    getData();
+
+
+</script>
+</html>

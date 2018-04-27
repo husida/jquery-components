@@ -1,0 +1,192 @@
+
+
+.cs-container{
+    position: relative;
+}
+
+.cs-result{
+    margin-top: 20px;
+    min-height: 40px;
+    width: 100%;
+    position: relative;
+    border: solid 1px #e5e6e7;
+    padding: 8px 22px 0 0px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+.cs-container.cs-container-active .cs-result{
+    border: 1px solid #5897fb;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.cs-result .cs-count{
+    color:#333;
+    position: absolute;
+    padding: 0 0 0 8px;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    top: 0;
+}
+.cs-result ul{
+    padding: 0;
+    margin: 0;
+}
+.cs-result li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+}
+
+.cs-result2{
+    border: none!important;
+    box-shadow: none!important;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.cs-text{
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-color: #e4e4e4;
+    line-height: 22px;
+    height: 22px;
+    padding:0 6px;
+    font-size: 14px;
+    color: #333;
+    margin-left: 4px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+    background-image: -webkit-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    background-image: -moz-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    background-image: -o-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+    background-clip: padding-box;
+    box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+
+}
+/*.cs-text:hover{*/
+    /*background: #293846;*/
+    /*color: #fff;*/
+/*}*/
+.cs-text .icon-del{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+    background: url("icon-del.png") center;
+    background-size: 100% 100%;
+}
+.cs-expand{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("icon-top.png") center;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.cs-expand.down{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.cs-drop{
+    width: 100%;
+    position: absolute;
+    left: -9999px;
+    top:100%;
+    border: solid 1px #e4eaec;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+.cs-container.cs-container-active .cs-drop{
+    left: 0;
+}
+
+.cs-drop .cs-search{
+    /*padding: 0 4px;*/
+}
+.cs-drop .cs-search input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #d1d1d1;
+    border-left: none;
+    border-right: none;
+    background: url('icon-search.png') no-repeat right 6px center;
+    box-sizing: border-box;
+    padding: 0 10px;
+    background-size: 24px 24px;
+    font-size: 16px;
+}
+.cs-table{
+    max-height: 400px;
+    overflow: auto;
+
+}
+.cs-table table{
+    position: relative;
+}
+
+/*滚动条样式*/
+.cs-table::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+.cs-table::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.cs-table::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+.cs-table table{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-bottom: 1px solid #e4eaec;
+    border-right: 1px solid #e4eaec;
+}
+.cs-table table thead{
+    background: #F0F0F0;
+}
+.cs-table table th,.cs-table table td{
+    padding: 8px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: normal;
+    border-bottom: 1px solid #e4eaec;
+    border-left: 1px solid #e4eaec;
+    cursor: default;
+}
+.cs-table tbody tr:hover{
+    background: #74afec;
+}
+.cs-table tbody tr.cs-select{
+    background: #5796ec;
+}

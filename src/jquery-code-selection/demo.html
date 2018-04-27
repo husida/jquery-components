@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>
+        编码表筛选
+    </title>
+    <link href="codeSelection.css" rel="stylesheet">
+
+    <style>
+        .cs-param-item{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="codeSelection">
+<div class="wrapper wrapper-content">
+    <div class="cs-param-item">
+        <span>类型：</span>
+        <label for="type1">
+            <input id="type1" type="radio" name="type" value="1" checked/>
+            表格
+        </label>
+        <label for="type1">
+            <input id="type2" type="radio" name="type" value="2"/>
+            列表
+        </label>
+        <label for="type1">
+            <input id="type3" type="radio" name="type" value="3"/>
+            树形
+        </label>
+    </div>
+
+    <div class="cs-param-item">
+        <span>是否多选</span>
+        <label for="multiple2">
+            <input id="multiple2" type="radio" name="multiple" value="true" checked/>
+            是
+        </label>
+
+        <label for="multiple1">
+            <input id="multiple1" type="radio" name="multiple" value="false"/>
+            否
+        </label>
+
+    </div>
+    <div class="cs-param-item">
+        <button id="getData">获取数据</button>
+        <button id="getSelectedIds">获取数据id</button>
+    </div>
+
+
+    <div id="demo" style="width: 500px"></div>
+
+</div>
+
+</body>
+
+<script src="/crdp/js/jquery.min.js?v=2.1.6"></script>
+<script type="text/javascript" src="jquery-code-selection.js"></script>
+
+
+<script>
+    var options = {
+        json:'test.json',
+        isMultiple :true,// 是否是多选
+        type: '1',// 编码表类型1：表格 2：列表  3：树
+        selectIds: '1,2,22,24,3,4',//初始化的id
+        onSelect: function(value) {
+        }
+    }
+
+    $('#demo').codeSelection(options);
+
+    // 是否多选
+    $('input[name="multiple"]').change(function(value) {
+        options.isMultiple = $('input[name="multiple"]:checked').val()=='true';
+        $('#demo').codeSelection('destroy').codeSelection(options);
+    });
+
+    // 类型
+    $('input[name="type"]').change(function(value) {
+        options.type = $('input[name="type"]:checked').val();
+
+        $('#demo').codeSelection('changeType',$('input[name="type"]:checked').val());
+    });
+
+    // 获取选中的数据
+    $("#getData").click(function(){
+        alert(JSON.stringify($('#demo').codeSelection('getSelectedData')));
+    })
+
+    // 获取选中的id
+    $("#getSelectedIds").click(function(){
+        alert($('#demo').codeSelection('getSelectedIds'));
+    })
+</script>
+</html>
+
